@@ -1,0 +1,280 @@
+/* =====================================================================
+  THEME TOKENS (change colors & shadows globally)
+  ---------------------------------------------------------------------
+  Edit the values on the right of each --variable to re‑theme the site.
+  Example: change --brand to another hex to update primary buttons.
+  Keep contrast high for accessibility (#2563eb on dark bg works well).
+  ===================================================================== */
+:root {
+  /* Navy theme */
+  --bg: #081833;          /* darker navy */
+  --panel: #081833;       /* same for panels */
+  --panel-2: #081833;     /* same for secondary panels */
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+  --brand: #2563eb;
+  --brand-2: #60a5fa;
+  --accent: #22d3ee;
+  --success: #22c55e;
+  --danger: #ef4444;
+  --ring: #3b82f6;
+  --shadow: 0 10px 30px rgba(2,6,23,0.4);
+  /* Global spacing scale */
+  --space-1: 8px;
+  --space-2: 12px;
+  --space-3: 16px;
+  --space-4: 20px;
+  --space-5: 24px;
+  --space-6: 28px;
+  --space-7: 32px;
+  --space-8: 40px;
+  --space-9: 48px;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  /* Solid midnight blue background */
+  background: var(--bg);
+  background-color: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+img { max-width: 100%; display: block; }
+
+.container { width: min(1120px, 90%); margin-inline: auto; }
+.small { width: min(1120px, 86%); }
+
+.skip-link {
+  position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden;
+}
+.skip-link:focus { left: 16px; top: 16px; width: auto; height: auto; background: var(--brand); color: #fff; padding: 8px 12px; border-radius: 8px; }
+
+/* =====================================================================
+  HEADER + NAVIGATION
+  Sticky top bar with logo, links, and action icons.
+  Mobile behavior: below 760px a hamburger (.nav-toggle) shows and
+  the menu becomes a vertical panel (.nav-links.open).
+  ===================================================================== */
+.site-header { position: sticky; top: 0; z-index: 50; backdrop-filter: saturate(1.2) blur(6px); background: var(--bg); border-bottom: 1px solid rgba(148,163,184,0.12); }
+.nav { display: flex; align-items: center; gap: 32px; padding: 18px 0; }
+.nav-links { flex: 1; display: flex; justify-content: center; }
+.nav-links ul { gap: 34px; }
+.logo { display: inline-flex; gap: 10px; align-items: center; text-decoration: none; color: var(--text); font-weight: 700; letter-spacing: .2px; }
+.logo-mark { filter: drop-shadow(0 6px 18px rgba(96,165,250,.35)); }
+.logo-text { color: #fff; background: none; -webkit-background-clip: initial; background-clip: initial; }
+
+.nav-links ul { display: flex; gap: 18px; list-style: none; margin: 0; padding: 0; }
+.nav-link { color: var(--muted); text-decoration: none; font-weight: 500; }
+.nav-link:hover { color: #fff; }
+
+.nav-actions { display: flex; gap: 10px; }
+.icon-btn { display: inline-flex; align-items: center; justify-content: center; height: 40px; width: 40px; border-radius: 12px; background: rgba(148,163,184,.08); color: var(--text); border: 1px solid rgba(148,163,184,.16); cursor: pointer; transition: .2s ease; }
+.icon-btn:hover { background: rgba(148,163,184,.14); }
+
+/* Separator dot utility (used in footer contact) */
+.sep { opacity: .6; }
+
+.nav-toggle { display: none; flex-direction: column; gap: 6px; height: 42px; width: 46px; border-radius: 12px; background: rgba(148,163,184,.08); border: 1px solid rgba(148,163,184,.16); color: var(--text); align-items: center; justify-content: center; cursor: pointer; }
+.nav-toggle .bar { display: block; height: 2px; width: 20px; background: var(--text); border-radius: 2px; }
+
+/* =====================================================================
+  HERO SECTION
+  Two-column layout: copy (left) and layered image card (right).
+  Replace the hero background image by changing the <img.hero-bg> src.
+  Card layers (.card-layer) create a frosted glass effect via blur.
+  ===================================================================== */
+.hero { position: relative; overflow: hidden; padding: 60px 0 80px; background: none; }
+.hero-grid { display: grid; gap: 42px; grid-template-columns: 1.05fr .95fr; align-items: center; }
+.eyebrow { color: var(--accent); font-weight: 700; letter-spacing: .18em; text-transform: uppercase; font-size: 12px; margin: 0 0 12px; }
+.hero h1 { font-size: clamp(28px, 5vw, 48px); line-height: 1.1; margin: 0 0 12px; }
+.hero .sub { color: var(--muted); margin: 0 0 20px; font-size: 16px; }
+.hero-ctas { display: flex; gap: 12px; margin: 16px 0 14px; }
+.hero-trust { display: flex; gap: 16px; list-style: none; padding: 0; margin: 14px 0 0; color: var(--muted); font-size: 14px; flex-wrap: wrap; }
+
+/* Centered hero variant */
+.hero-centered .hero-grid.single-col { grid-template-columns: 1fr; min-height: 78vh; }
+.hero-centered .hero-copy { text-align: center; max-width: 960px; margin-inline: auto; padding: 8px 0 0; }
+.hero-centered .hero-copy > * + * { margin-top: 20px; }
+.hero-centered .hero-title { margin-top: 12px; letter-spacing: -0.5px; }
+.hero-centered .hero-ctas { justify-content: center; gap: 24px; margin-top: 34px; }
+.hero-centered .hero-ctas .btn { padding: 12px 22px; }
+.hero-centered .hero-trust { justify-content: center; gap: 40px; margin-top: 40px; }
+.hero-centered .hero-trust li { position: relative; padding: 2px 4px 2px 10px; }
+.hero-centered .hero-trust li::before { content: ""; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 6px; height: 6px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 8px var(--accent); }
+
+/* Plain hero title (no shimmer) */
+.hero-title { color: #fff; background: none; -webkit-background-clip: initial; background-clip: initial; position: relative; margin-top: 6px; text-shadow: none; animation: none; }
+
+/* Fade / slide sequence */
+/* Disable entrance animation for hero elements */
+.hero-focus > * { opacity: 1; transform: none; animation: none; }
+
+/* No hero animations */
+.hero-copy .eyebrow { animation: none; }
+
+/* HERO IMAGE CLEAN DISPLAY OVERRIDE
+  Removed gradients, filters, and glass layers so the local image shows clearly. */
+.hero-art { position: relative; min-height: 60px; border: none; border-radius: 0; background: transparent; box-shadow: none; }
+.hero-art.empty { outline: none; }
+.hero-art .hero-bg { display: none; }
+
+/* =====================================================================
+  FEATURES GRID
+  Four small highlight cards. To add another, duplicate an .feature
+  element in the HTML; layout wraps automatically on smaller screens.
+  ===================================================================== */
+.features { padding: 64px 0 32px; }
+.feature-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.feature { background: var(--panel); border: 1px solid rgba(148,163,184,.14); padding: 22px; border-radius: 16px; box-shadow: var(--shadow); }
+.feature .icon { height: 40px; width: 40px; display:flex; align-items:center; justify-content:center; border-radius: 10px; color: var(--brand-2); background: rgba(96,165,250,.12); margin-bottom: 10px; }
+.feature h3 { margin: 6px 0 8px; font-size: 16px; }
+.feature p { margin: 0; color: var(--muted); font-size: 14px; }
+
+/* =====================================================================
+  SERVICES GRID (originally categories)
+  Each .cat tile has a gradient + image overlay. Replace image URLs
+  in HTML; gradients provide a fallback if images fail.
+  ===================================================================== */
+.categories { padding: 48px 0 28px; }
+.sec-head { display:flex; align-items:center; justify-content: space-between; gap: 16px; margin-bottom: 14px; }
+.sec-head h2 { margin: 0; font-size: 22px; }
+.link { color: var(--brand-2); text-decoration: none; }
+.link:hover { text-decoration: underline; }
+.category-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.cat { display: grid; grid-template-rows: 160px auto; gap: 12px; background: var(--panel); border: 1px solid rgba(148,163,184,.14); border-radius: 16px; overflow: hidden; text-decoration: none; color: var(--text); box-shadow: var(--shadow); }
+.cat-thumb { position: relative; background: transparent; overflow: hidden; }
+.cat-thumb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(.7) contrast(1.05); }
+.cat-thumb::after { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,.35); }
+.cat-electronics { background-image: none; }
+.cat-apparel { background-image: none; }
+.cat-home { background-image: none; }
+.cat-beauty { background-image: none; }
+.cat-meta { padding: 0 16px 16px; }
+.cat-meta h3 { margin: 0 0 4px; font-size: 16px; }
+.cat-meta p { margin: 0; color: var(--muted); font-size: 13px; }
+
+/* =====================================================================
+  BANNER CALLOUT
+  Single promotional block. Adjust gradient or padding here for look.
+  ===================================================================== */
+.banner { padding: 40px 0 48px; }
+.banner-inner { border-radius: 18px; padding: 32px; background: var(--panel);
+  border: 1px solid rgba(148,163,184,.18); box-shadow: var(--shadow);
+}
+.banner h2 { margin: 0 0 6px; }
+.banner p { margin: 0 0 12px; color: var(--text); opacity: .9; }
+
+/* =====================================================================
+  PLANS / PRODUCT CARDS
+  Grid of VOIP plan cards (no pricing text currently). To restore
+  pricing: add a <p class="p-price">$XX</p> back into each card.
+  ===================================================================== */
+.products { padding: 48px 0 56px; }
+.product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.product-card { background: var(--panel); border: 1px solid rgba(148,163,184,.14); border-radius: 18px; overflow: hidden; box-shadow: var(--shadow); display: grid; grid-template-rows: 200px auto; }
+.product-thumb { display: block; position: relative; }
+.product-thumb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(.82); }
+.product-thumb::after { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,.32); }
+.p-info { padding: 16px; }
+.p-title { margin: 2px 0 6px; font-size: 16px; }
+.p-price { margin: 0 0 10px; color: #fff; font-weight: 600; }
+.p-actions { display: flex; align-items:center; gap: 10px; }
+
+/* =====================================================================
+  TESTIMONIALS
+  Simple blockquote cards for social proof.
+  ===================================================================== */
+.testimonials { padding: 48px 0 48px; }
+.t-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.t-card { background: var(--panel); border: 1px solid rgba(148,163,184,.14); border-radius: 16px; padding: 20px; color: var(--text); box-shadow: var(--shadow); }
+.t-card footer { color: var(--muted); margin-top: 8px; font-size: 14px; }
+
+/* =====================================================================
+  NEWSLETTER / EMAIL CAPTURE
+  Two-column box with form. Form is client-only; add backend to store
+  emails. Input focus style uses --ring variable for accessibility.
+  ===================================================================== */
+.newsletter { padding: 48px 0 56px; }
+.news-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: center; background: var(--panel); border:1px solid rgba(148,163,184,.14); border-radius: 18px; padding: 24px; box-shadow: var(--shadow); }
+.news-copy h2 { margin: 0 0 6px; }
+.news-copy p { margin: 0; color: var(--muted); }
+.news-form { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: start; }
+.news-form input { height: 44px; border-radius: 12px; padding: 0 14px; border: 1px solid rgba(148,163,184,.2); background: var(--panel); color: var(--text); outline: none; }
+.news-form input:focus { border-color: var(--ring); box-shadow: 0 0 0 3px rgba(59,130,246,.25); }
+.news-form .form-msg { grid-column: 1 / -1; margin: 0; font-size: 14px; color: var(--muted); min-height: 1.2em; }
+
+/* =====================================================================
+  FOOTER
+  Multi-column layout collapsing at small widths. Add/remove columns
+  in HTML; grid auto-adjusts. Social icons are simple circular buttons.
+  ===================================================================== */
+.site-footer { background: var(--bg); border-top: 1px solid rgba(148,163,184,.14); margin-top: 32px; }
+.footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 20px; padding: 28px 0; }
+.muted { color: var(--muted); }
+.contact-block { margin-top: 8px; display: flex; align-items: center; gap: 10px; font-style: normal; }
+.contact-block a { color: var(--text); text-decoration: none; }
+.contact-block a:hover { text-decoration: underline; }
+.foot-links { list-style: none; margin: 6px 0 0; padding: 0; display: grid; gap: 6px; }
+.foot-links a { text-decoration: none; color: var(--muted); }
+.foot-links a:hover { color: #fff; }
+.socials { display: flex; gap: 10px; }
+.footer-bottom { border-top: 1px solid rgba(148,163,184,.12); }
+.footer-bottom .container { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
+.foot-legal { list-style: none; display: flex; gap: 12px; margin: 0; padding: 0; }
+
+/* =====================================================================
+  BUTTONS
+  Utility button classes: .btn-primary (solid), .btn-ghost (outline),
+  .btn-invert (light on dark). Adjust gradients or borders here.
+  ===================================================================== */
+.btn { display: inline-flex; align-items:center; justify-content:center; gap: 10px; padding: 12px 16px; border-radius: 12px; background: rgba(148,163,184,.12); color: #fff; border: 1px solid rgba(148,163,184,.24); text-decoration: none; cursor: pointer; font-weight: 600; }
+.btn:hover { background: rgba(148,163,184,.18); }
+.btn-primary { background: var(--brand); border-color: rgba(59,130,246,.6); box-shadow: 0 8px 24px rgba(37,99,235,.25); }
+.btn-primary:hover { filter: brightness(1.05); }
+.btn-ghost { background: transparent; border-color: rgba(148,163,184,.24); }
+.btn-invert { background: #fff; color: #111827; border-color: #fff; }
+.btn-sm { padding: 10px 14px; border-radius: 10px; font-size: 14px; }
+
+/* =====================================================================
+  SHARED UTILITIES
+  .sr-only hides elements visually but keeps for screen readers.
+  ===================================================================== */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+.noscript { background: var(--bg); padding: 12px; text-align: center; border-top: 1px solid rgba(148,163,184,.18); }
+
+/* =====================================================================
+  RESPONSIVE BREAKPOINTS
+  1024px: switch to single-column hero, reduce grid columns.
+  760px: mobile nav; further grid simplification (2 cols -> 1).
+  Adjust these breakpoints if your audience uses different devices.
+  ===================================================================== */
+@media (max-width: 1024px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .feature-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .product-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .t-grid { grid-template-columns: 1fr; gap: 20px; }
+  .news-inner { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 760px) {
+  .nav { flex-wrap: wrap; }
+  .nav-toggle { display: flex; order: 2; margin-left: auto; }
+  .nav-links { display: none; position: absolute; top: 56px; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid rgba(148,163,184,.12); padding: 8px 0 16px; }
+  .nav-links.open { display: block; }
+  .nav-links ul { flex-direction: column; padding: 12px; gap: 12px; justify-content: flex-start; }
+  .feature-grid { grid-template-columns: 1fr; }
+  .category-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .product-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* Accessibility: respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}

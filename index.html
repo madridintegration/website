@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+  <!--
+    =============================================================
+    Madrid Integration Services Landing Page (Static HTML)
+    -------------------------------------------------------------
+    HOW TO EDIT (no coding experience needed):
+    1. Text: Change any words you see directly between the tags (e.g. <h1>...</h1>).
+    2. Buttons / Links: Update the text inside <a> or <button>. If you want a real page, change the href="#something" to a real URL or to an ID of a section on this page.
+    3. Images: Replace the Unsplash URL (https://source.unsplash.com/...) inside the src="" with your own image link. Keep the quotes. Try to keep similar dimensions for best layout.
+    4. ALT text: Very important for accessibility & SEO. Change alt="..." to describe the image.
+    5. Duplicate a card/section: Copy the whole block (e.g. an <article class="product-card">...</article>) and paste it after the last one inside the same parent grid.
+    6. Remove something: Delete the entire element (from opening tag <section ...> to its matching closing tag </section>)—make sure you remove both.
+    7. Colors / Theme: See styles.css at the top (CSS variables). You can change brand color there once and it updates everywhere.
+    8. JavaScript behaviors (menu toggle, smooth scroll, form message, toast): See script.js with added comments.
+    SAFE RULE: If you're unsure—only change text between tags or image URLs.
+    =============================================================
+  -->
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Madrid Integration Services — Global VOIP Solutions</title>
+  <meta name="description" content="Madrid Integration Services: Reliable VOIP solutions for USA, China, Australia, Canada, UK, Japan, and more. Connect globally with crystal-clear voice and advanced features." />
+  <meta property="og:title" content="Madrid Integration Services — Global VOIP Solutions" />
+  <meta property="og:description" content="Reliable VOIP solutions for USA, China, Australia, Canada, UK, Japan, and more. Connect globally with crystal-clear voice and advanced features." />
+  <meta name="theme-color" content="#081833" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ========================================================= -->
+  <!-- Header / Navigation: Logo + menu links.                   -->
+  <!-- Change the menu text by editing the <a> labels below.     -->
+  <!-- Add a new menu item: duplicate a <li> ... </li> inside <ul> -->
+  <!-- ========================================================= -->
+    <header class="site-header" id="top">
+      <div class="container nav">
+        <a href="#top" class="logo" aria-label="Madrid Integration Services Home">
+  <span class="logo-text">Madrid Integration Services</span> <!-- Company name text -->
+        </a>
+
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+
+        <nav class="nav-links" aria-label="Primary">
+          <ul>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#service" class="nav-link">Service</a></li>
+            <li><a href="#newsletter" class="nav-link">Newsletter</a></li>
+            <li><a href="#reviews" class="nav-link">Reviews</a></li>
+            <li><a href="#contact" class="nav-link">Contact Us</a></li>
+          </ul>
+        </nav>
+
+
+        <div class="nav-actions">
+          <button class="icon-btn" aria-label="Search">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 21l-4.35-4.35M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <button class="icon-btn" aria-label="Cart">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6h15l-1.2 6H7.5M6 6 5 3H3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="21" r="1.8" fill="currentColor"/><circle cx="18" cy="21" r="1.8" fill="currentColor"/></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ========================================================= -->
+    <!-- HERO SECTION: Main headline + key selling points           -->
+    <!-- Edit <h1>, eyebrow line, paragraph, buttons.               -->
+    <!-- Change hero background: update the img.hero-bg src URL.    -->
+    <!-- ========================================================= -->
+    <main id="main">
+      <section class="hero hero-centered">
+        <div class="container hero-grid single-col">
+          <div class="hero-copy hero-focus">
+            <p class="eyebrow">Global Connectivity • Crystal Clear Voice</p>
+            <h1 class="hero-title">Empowering Your Business with VOIP Solutions Worldwide</h1>
+            <p class="sub fx-fade-delay">Madrid Integration Services delivers reliable VOIP calling to USA, China, Australia, Canada, UK, Japan, and 100+ countries. Experience secure, scalable, and affordable communication for teams and enterprises.</p>
+            <div class="hero-ctas">
+              <a class="btn btn-primary" href="#service">See Our Services</a>
+              <a class="btn btn-ghost" href="#about">Why Madrid?</a>
+            </div>
+            <ul class="hero-trust">
+              <li>99.99% uptime</li>
+              <li>Global coverage</li>
+              <li>24/7 expert support</li>
+            </ul>
+          </div>
+          <!-- Removed image column; content centered -->
+        </div>
+      </section>
+
+      <!-- ========================================================= -->
+      <!-- FEATURES: Four quick value props.                        -->
+      <!-- To change: edit <h3> titles and <p> descriptions.        -->
+      <!-- Add one: duplicate an <article class="feature">...</article> -->
+      <!-- ========================================================= -->
+      <section class="features" aria-label="Store highlights">
+        <div class="container feature-grid">
+          <article class="feature">
+            <div class="icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 7h18l-2 10H5L3 7Z" stroke="currentColor" stroke-width="2"/><path d="M7 7V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+            <h3>Global Coverage</h3>
+            <p>Connect to USA, China, Australia, Canada, UK, Japan, and 100+ countries with one platform.</p>
+          </article>
+          <article class="feature">
+            <div class="icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 1v22M1 12h22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Crystal Clear Voice</h3>
+            <p>HD audio quality and low latency for business-critical calls.</p>
+          </article>
+          <article class="feature">
+            <div class="icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7a8 8 0 1 0 16 0" stroke="currentColor" stroke-width="2"/><path d="M12 1v6" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+            <h3>Secure & Reliable</h3>
+            <p>Enterprise-grade encryption and 99.99% uptime guarantee.</p>
+          </article>
+          <article class="feature">
+            <div class="icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 22a10 10 0 1 0-7.07-2.93L2 22l2.93-2.93A10 10 0 0 0 12 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>24/7 Support</h3>
+            <p>Expert help available anytime, anywhere in the world.</p>
+          </article>
+        </div>
+      </section>
+
+  <!-- ========================================================= -->
+  <!-- SERVICES GRID (was categories): Each tile = region or    -->
+  <!-- service focus. Change image URL + <h3> + <p>.            -->
+  <!-- Add another card: duplicate an <a class="cat">...</a>.    -->
+  <!-- ========================================================= -->
+      <section class="categories" id="categories" aria-label="Shop by category">
+        <div class="container">
+          <header class="sec-head">
+            <h2>Our VOIP Services</h2>
+            <a href="#newsletter" class="link">Get a free quote →</a>
+          </header>
+          <div class="category-grid">
+            <a class="cat" href="#service" aria-label="USA VOIP">
+              <div class="cat-thumb cat-electronics">
+                <img src="usaflag.jpg" alt="USA VOIP" loading="lazy" decoding="async" referrerpolicy="no-referrer" />
+              </div>
+              <div class="cat-meta">
+                <h3>USA</h3>
+                <p>Unlimited calls, local numbers, business features</p>
+              </div>
+            </a>
+            <a class="cat" href="#service" aria-label="China VOIP">
+              <div class="cat-thumb cat-apparel">
+                <img src="chinaflag.jpg" alt="China VOIP" loading="lazy" decoding="async" referrerpolicy="no-referrer" />
+              </div>
+              <div class="cat-meta">
+                <h3>China</h3>
+                <p>Reliable connectivity, Mandarin support, secure lines</p>
+              </div>
+            </a>
+            <a class="cat" href="#service" aria-label="Australia VOIP">
+              <div class="cat-thumb cat-home">
+                <img src="austrailiaflag.jpg" alt="Australia VOIP" loading="lazy" decoding="async" referrerpolicy="no-referrer" />
+              </div>
+              <div class="cat-meta">
+                <h3>Australia</h3>
+                <p>HD voice, local support, scalable plans</p>
+              </div>
+            </a>
+            <a class="cat" href="#service" aria-label="Canada VOIP">
+              <div class="cat-thumb cat-beauty">
+                <img src="canada flag-2 - Copy.jpg" alt="Canada VOIP" loading="lazy" decoding="async" referrerpolicy="no-referrer" />
+              </div>
+              <div class="cat-meta">
+                <h3>Canada</h3>
+                <p>Business and residential VOIP, toll-free numbers</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+  <!-- ========================================================= -->
+  <!-- BANNER / CALLOUT: One bold message + button.             -->
+  <!-- Change headline, paragraph, and button link/text.        -->
+  <!-- ========================================================= -->
+      <section class="banner" id="deals" aria-label="Deals of the week">
+        <div class="container banner-inner">
+          <h2>Get Your Free VOIP Consultation</h2>
+          <p>Contact us for a free assessment and discover how Madrid Integration Services can transform your communications.</p>
+          <a href="#contact" class="btn btn-invert">Contact Us</a>
+        </div>
+      </section>
+
+  <!-- ========================================================= -->
+  <!-- POPULAR PLANS (Product-style cards):                      -->
+  <!-- To remove pricing we left out price elements.            -->
+  <!-- Change plan name inside <h3>, button text, image src.    -->
+  <!-- Duplicate <article class="product-card"> for more plans. -->
+  <!-- ========================================================= -->
+      <section class="products" id="featured" aria-label="Featured products">
+        <div class="container">
+          <header class="sec-head">
+            <h2>Popular VOIP Plans</h2>
+            <a href="#service" class="link">See all services →</a>
+          </header>
+          <div class="product-grid">
+            <!-- Product Card Template -->
+    <!-- Example card: Change image src, alt text, plan title (<h3>), button label. -->
+            <article class="product-card" data-sku="VOIP-USA">
+              <a class="product-thumb" href="#">
+                <img src="usaflag.jpg" alt="USA VOIP Plan" loading="lazy" decoding="async" referrerpolicy="no-referrer" />
+              </a>
+              <div class="p-info">
+                <h3 class="p-title">USA VoIP</h3>
+                
+                <div class="p-actions">
+                  <button class="btn btn-sm" data-action="add-to-cart">Get Quote</button>
+                  <a class="link" href="#">Details</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card" data-sku="VOIP-CHINA">
+              <a class="product-thumb" href="#">
+                <img src="chinaflag.jpg" alt="China VOIP Plan" loading="lazy" decoding="async" referrerpolicy="no-referrer" />
+              </a>
+              <div class="p-info">
+                <h3 class="p-title">China VoIP</h3>
+                
+                <div class="p-actions">
+                  <button class="btn btn-sm" data-action="add-to-cart">Get Quote</button>
+                  <a class="link" href="#">Details</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card" data-sku="VOIP-AUS">
+              <a class="product-thumb" href="#">
+                <img src="austrailiaflag-2.jpg" alt="Australia VOIP Plan" loading="lazy" decoding="async" referrerpolicy="no-referrer" />
+              </a>
+              <div class="p-info">
+                <h3 class="p-title">Australia VoIP</h3>
+                
+                <div class="p-actions">
+                  <button class="btn btn-sm" data-action="add-to-cart">Get Quote</button>
+                  <a class="link" href="#">Details</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card" data-sku="VOIP-CANADA">
+              <a class="product-thumb" href="#">
+                <img src="canada flag.jpg" alt="Canada VOIP Plan" loading="lazy" decoding="async" referrerpolicy="no-referrer" />
+              </a>
+              <div class="p-info">
+                <h3 class="p-title">Canada VoIP</h3>
+                
+                <div class="p-actions">
+                  <button class="btn btn-sm" data-action="add-to-cart">Get Quote</button>
+                  <a class="link" href="#">Details</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card" data-sku="VOIP-UK">
+              <a class="product-thumb" href="#">
+                <img src="ukflag.jpg" alt="UK VOIP Plan" loading="lazy" decoding="async" referrerpolicy="no-referrer" />
+              </a>
+              <div class="p-info">
+                <h3 class="p-title">UK VoIP</h3>
+                
+                <div class="p-actions">
+                  <button class="btn btn-sm" data-action="add-to-cart">Get Quote</button>
+                  <a class="link" href="#">Details</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card" data-sku="VOIP-JAPAN">
+              <a class="product-thumb" href="#">
+                <img src="japanflag.jpg" alt="Japan VOIP Plan" loading="lazy" decoding="async" referrerpolicy="no-referrer" />
+              </a>
+              <div class="p-info">
+                <h3 class="p-title">Japan VoIP</h3>
+                
+                <div class="p-actions">
+                  <button class="btn btn-sm" data-action="add-to-cart">Get Quote</button>
+                  <a class="link" href="#">Details</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+  <!-- ========================================================= -->
+  <!-- TESTIMONIALS: Client quotes build trust.                  -->
+  <!-- Edit text inside each <blockquote>.                      -->
+  <!-- Add another: duplicate a <blockquote class="t-card">.    -->
+  <!-- ========================================================= -->
+      <section class="testimonials" aria-label="Customer testimonials">
+        <div class="container t-grid">
+          <blockquote class="t-card">
+            “Madrid Integration Services made our global expansion seamless. Calls to our US and China offices are crystal clear.”
+            <footer>— Sarah L., CTO</footer>
+          </blockquote>
+          <blockquote class="t-card">
+            “The support team is always available and knowledgeable. We rely on Madrid for all our international VOIP needs.”
+            <footer>— Michael T., IT Manager</footer>
+          </blockquote>
+          <blockquote class="t-card">
+            “Setup was fast and easy. Our team in Australia and Canada is now fully connected.”
+            <footer>— Priya S., Operations Lead</footer>
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- ========================================================= -->
+      <!-- NEWSLETTER / ABOUT SECTION: Email capture form (demo).    -->
+      <!-- Form is client-side only; no backend.                     -->
+      <!-- Change heading, paragraph, placeholder text.              -->
+      <!-- ========================================================= -->
+      <section class="newsletter" id="about" aria-label="Stay in the loop">
+        <div class="container news-inner">
+          <div class="news-copy">
+            <h2>Subscribe for VOIP Insights & Offers</h2>
+            <p>Get the latest on global VOIP trends, new features, and exclusive deals from Madrid Integration Services.</p>
+          </div>
+          <form class="news-form" id="newsletter-form" novalidate>
+            <label for="email" class="sr-only">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@business.com" required />
+            <button class="btn btn-primary" type="submit">Subscribe</button>
+            <p class="form-msg" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- ========================================================= -->
+    <!-- FOOTER: Company info + links.                              -->
+    <!-- Change company blurb, link labels, add/remove social icons. -->
+    <!-- The © year updates automatically via script.js             -->
+    <!-- ========================================================= -->
+    <footer class="site-footer" id="contact">
+      <div class="container footer-grid">
+        <div>
+          <a href="#top" class="logo">
+              <span class="logo-text">Madrid Integration Services</span>
+            </a>
+            <p class="muted">Global VOIP solutions for business and enterprise. Connect, collaborate, and grow with Madrid.</p>
+            <address class="contact-block">
+              <a href="tel:+16398761650">+16398761650</a>
+              <span class="sep" aria-hidden="true">•</span>
+              <a href="mailto:luisdelarosa@madridintegrationservices.com">luisdelarosa@madridintegrationservices.com</a>
+            </address>
+        </div>
+        <nav aria-label="Footer">
+          <h4>Company</h4>
+          <ul class="foot-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#service">Service</a></li>
+            <li><a href="#newsletter">Newsletter</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Help">
+          <h4>Support</h4>
+          <ul class="foot-links">
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">FAQs</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h4>Follow</h4>
+          <div class="socials">
+            <a class="icon-btn" aria-label="LinkedIn" href="#">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/><path d="M7 8v8M12 8v8M17 8v8" stroke="currentColor" stroke-width="2"/></svg>
+            </a>
+            <a class="icon-btn" aria-label="Twitter" href="#">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 7.5c-.6.3-1.2.5-1.9.6a3.2 3.2 0 0 0-5.6 2v.6A8.9 8.9 0 0 1 3.7 6.2s-3 6.8 3.8 9.8c-1.6 1-3.4 1.5-5.3 1.3 6.8 3.7 15.1 0 15.1-8.6v-.4c.6-.4 1.1-1 1.5-1.7Z" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+            </a>
+            <a class="icon-btn" aria-label="YouTube" href="#">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="3" stroke="currentColor" stroke-width="2"/><path d="m10 10 5 2-5 2v-4Z" fill="currentColor"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container small">
+          <p>© <span id="year"></span> Madrid Integration Services. All rights reserved.</p>
+          <ul class="foot-legal">
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Cookies</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <noscript>
+      <div class="noscript">For the best experience, please enable JavaScript.</div>
+    </noscript>
+  </body>
+</html>
